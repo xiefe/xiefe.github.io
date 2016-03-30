@@ -103,48 +103,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/30/RSEM-Brief-Introduction/" data-id="cimeuehfa0001xdk7vt8goxlo" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-RSEM Introduction" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/03/30/RSEM Introduction/" class="article-date">
-  <time datetime="2016-03-30T06:09:19.000Z" itemprop="datePublished">2016-03-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="RSEM"><a href="#RSEM" class="headerlink" title="RSEM"></a>RSEM</h1><p>RSEM is a kind of algorithm to determine the expression levels.</p>
-<p>In TCGA, there are two analysis pipelines used to create Level 3 expression data from RNA Sequence data. The first approach used at TCGA relies on the RPKM method, while the second method uses MapSplice to do the alignment and RSEM to perform the quantitation.</p>
-<p>##Advantages</p>
-<ol>
-<li><p>A key feature unique to RSEM is the lack of the requirement of a reference genome. Instead, it only requires the user to provide a set of reference transcript sequences, such as one produced by a de novo transcriptome assembler </p>
-</li>
-<li><p>The major problems with previous methods are that it: (1) throws away data and produces biased estimates if “mappability” is not taken into account, (2) produces incorrect estimates for alternatively-spliced genes [16], and (3) does not extend well to the task of estimating isoform abundances. RSEM can address all of these issues. </p>
-</li>
-</ol>
-<p>##Implemention methods<br>A typical run of RSEM consists of just two steps. First, a set of reference transcript sequences are generated and preprocessed for use by later RSEM steps. Second, a set of RNA-Seq reads are aligned to the reference tran- scripts and the resulting alignments are used to estimate abundances and their credibility intervals. </p>
-<p>##Output</p>
-<h3 id="rsem-genes-isoforms-results"><a href="#rsem-genes-isoforms-results" class="headerlink" title="rsem.genes/isoforms.results"></a>rsem.genes/isoforms.results</h3><p>The (first) RSEM paper explains that the program calculates two values. One represent the (estimated) number of reads that aligned to a transcript. This value is not an integer because RSEM only reports a guess of how many ambiguously mapping reads belong to a transcript/gene. This number is what the TCGA slightly misleadingly calls raw counts.</p>
-<p>The scaled estimate value on the other hand is the estimated frequency of the gene/transcript amongst the total number of transcripts that were sequenced. Newer versions of RSEM call this value (multiplied by 1e6) TPM - Transcripts Per Million. It’s closely related to FPKM, as explained on the RSEM website. The important point is that TPM, like FPKM, is independent of transcript length, whereas “raw” counts are not!</p>
-<h3 id="rsem-genes-isoforms-normalized-results"><a href="#rsem-genes-isoforms-normalized-results" class="headerlink" title="rsem.genes/isoforms.normalized.results"></a>rsem.genes/isoforms.normalized.results</h3><p>The <code>*.normalized_results</code> files on the other hand just contain a scaled version of the raw_counts column. The values are divided by the 75-percentile and multiplied by 1000. This should make the values a bit more comparable between experiments.</p>
-<p>##References:<br>Li B, Ruotti V, Stewart RM, Thomson JA, Dewey CN. (2010)<br>RNA-Seq gene expression estimation with read mapping uncertainty.<br>Bioinformatics. Feb 15;26(4):493-500.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/30/RSEM Introduction/" data-id="cimeuehf00000xdk76rkqn4i7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/30/RSEM-Brief-Introduction/" data-id="cimevb5qz0002z2k7pwqzfuvr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -180,7 +139,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/09/test/" data-id="cimeuehgh0003xdk74o60h5nq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/09/test/" data-id="cimevb5qn0001z2k7as8q5z9k" class="article-share-link">Share</a>
       
       
     </footer>
@@ -225,7 +184,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/09/hello-world/" data-id="cimeuehfx0002xdk7hcbhlnpa" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/09/hello-world/" data-id="cimevb5um0003z2k78ugvl6zk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -266,10 +225,6 @@
         
           <li>
             <a href="/2016/03/30/RSEM-Brief-Introduction/">RSEM Brief Introduction</a>
-          </li>
-        
-          <li>
-            <a href="/2016/03/30/RSEM Introduction/">(no title)</a>
           </li>
         
           <li>
